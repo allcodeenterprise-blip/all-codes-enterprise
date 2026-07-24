@@ -120,44 +120,147 @@
         }
 
         /* ============================================================
-           PORTFOLIO
+           PACKAGES
         ============================================================ */
-        .portfolio-section {
+        .packages-section {
             padding: 60px 0;
         }
-        .portfolio-grid {
+        .packages-grid {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .portfolio-item {
+        .package-card {
             background: rgba(18, 18, 32, 0.7);
             padding: 30px;
             border-radius: 16px;
             border: 1px solid rgba(224, 158, 54, 0.15);
-            max-width: 300px;
             flex: 1;
-            text-align: center;
+            min-width: 250px;
+            max-width: 320px;
             transition: 0.3s;
+            text-align: center;
         }
-        .portfolio-item:hover {
+        .package-card:hover {
             border-color: #E09E36;
             transform: translateY(-5px);
         }
-        .portfolio-item .icon {
+        .package-card .icon {
             font-size: 40px;
             margin-bottom: 10px;
         }
-        .portfolio-item h4 {
+        .package-card h3 {
             color: #E09E36;
-            font-size: 20px;
+            font-size: 24px;
         }
-        .portfolio-item p {
+        .package-card .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FFD700;
+            margin: 10px 0;
+        }
+        .package-card .codes-list {
             color: #c0c0d0;
             font-size: 14px;
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        .package-card .codes-list span {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: rgba(224, 158, 54, 0.1);
+            border: 1px solid rgba(224, 158, 54, 0.2);
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .package-card .btn-package {
+            display: inline-block;
+            margin-top: 15px;
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .package-card .btn-package:hover {
+            background: #FFD700;
+        }
+        .package-card.popular {
+            border-color: #E09E36;
+            background: rgba(224, 158, 54, 0.08);
+        }
+        .package-card.popular .badge {
+            background: #E09E36;
+            color: #0b0b12;
+            font-size: 12px;
+            padding: 2px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* ============================================================
+           3 CODES DISPLAY
+        ============================================================ */
+        .codes-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .codes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .code-card {
+            background: rgba(18, 18, 32, 0.7);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            min-width: 120px;
+            flex: 1;
+            max-width: 180px;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .code-card:hover {
+            transform: translateY(-5px);
+            border-color: #E09E36;
+        }
+        .code-card .code {
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+        }
+        .code-card .meaning {
+            font-size: 13px;
+            color: #c0c0d0;
             margin-top: 5px;
         }
+        .code-card .error {
+            font-size: 12px;
+            color: #888;
+            margin-top: 3px;
+        }
+        .code-card .hex {
+            font-size: 11px;
+            font-family: monospace;
+            color: #666;
+            margin-top: 3px;
+        }
+        .gold .code { color: #E09E36; }
+        .blue .code { color: #3603E0; }
+        .dark-blue .code { color: #3903E0; }
+        .silver .code { color: #C0C0C0; }
+        .yellow .code { color: #FFD700; }
+        .white .code { color: #FFFFFF; }
+        .purple .code { color: #800080; }
+        .teal .code { color: #008080; }
 
         /* ============================================================
            ABOUT
@@ -206,132 +309,6 @@
         }
 
         /* ============================================================
-           CODES
-        ============================================================ */
-        .codes-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .codes-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .code-card {
-            background: rgba(18, 18, 32, 0.7);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(224, 158, 54, 0.15);
-            min-width: 160px;
-            flex: 1;
-            max-width: 220px;
-            transition: 0.3s;
-        }
-        .code-card:hover {
-            transform: translateY(-5px);
-            border-color: #E09E36;
-        }
-        .code-card .code {
-            font-size: 28px;
-            font-weight: bold;
-            display: block;
-        }
-        .code-card .meaning {
-            font-size: 14px;
-            color: #c0c0d0;
-            margin-top: 8px;
-        }
-        .code-card .error {
-            font-size: 13px;
-            color: #888;
-            margin-top: 4px;
-        }
-        .gold .code {
-            color: #E09E36;
-        }
-        .blue .code {
-            color: #3603E0;
-        }
-        .dark-blue .code {
-            color: #3903E0;
-        }
-
-        /* ============================================================
-           PRICING
-        ============================================================ */
-        .pricing-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .pricing-grid {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .plan {
-            background: rgba(18, 18, 32, 0.5);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(224, 158, 54, 0.15);
-            flex: 1;
-            min-width: 200px;
-            max-width: 280px;
-            transition: 0.3s;
-        }
-        .plan:hover {
-            border-color: #E09E36;
-            transform: translateY(-5px);
-        }
-        .plan h3 {
-            color: #E09E36;
-            font-size: 22px;
-        }
-        .plan .price {
-            font-size: 30px;
-            font-weight: bold;
-            color: #FFD700;
-            margin: 10px 0;
-        }
-        .plan ul {
-            list-style: none;
-            padding: 0;
-        }
-        .plan ul li {
-            padding: 5px 0;
-            color: #c0c0d0;
-            font-size: 14px;
-        }
-        .plan .btn-plan {
-            display: inline-block;
-            margin-top: 15px;
-            background: #E09E36;
-            color: #0b0b12;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .plan .btn-plan:hover {
-            background: #FFD700;
-        }
-        .plan.popular {
-            border-color: #E09E36;
-            background: rgba(224, 158, 54, 0.08);
-        }
-        .plan.popular .badge {
-            background: #E09E36;
-            color: #0b0b12;
-            font-size: 12px;
-            padding: 2px 14px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        /* ============================================================
            FAQ
         ============================================================ */
         .faq-section {
@@ -361,46 +338,6 @@
             color: #c0c0d0;
             font-size: 15px;
             margin-top: 8px;
-        }
-
-        /* ============================================================
-           NEWSLETTER
-        ============================================================ */
-        .newsletter-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .newsletter-form {
-            max-width: 450px;
-            margin: 0 auto;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .newsletter-form input {
-            flex: 1;
-            padding: 14px;
-            background: #1a1a2a;
-            color: #f0f0f8;
-            border: 1px solid #333;
-            border-radius: 30px;
-            font-size: 16px;
-            min-width: 200px;
-        }
-        .newsletter-form button {
-            background: #E09E36;
-            color: #0b0b12;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .newsletter-form button:hover {
-            background: #FFD700;
         }
 
         /* ============================================================
@@ -455,7 +392,32 @@
         }
 
         /* ============================================================
-           LIVE CHAT (Floating Button)
+           FOOTER
+        ============================================================ */
+        footer {
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(224, 158, 54, 0.15);
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        footer .footer-links a {
+            color: #c0c0d0;
+            transition: 0.3s;
+        }
+        footer .footer-links a:hover {
+            color: #E09E36;
+        }
+
+        /* ============================================================
+           LIVE CHAT
         ============================================================ */
         .live-chat {
             position: fixed;
@@ -481,13 +443,9 @@
             transform: scale(1.1);
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
-        .live-chat a span {
-            font-size: 12px;
-            display: none;
-        }
 
         /* ============================================================
-           SCROLL-TO-TOP BUTTON
+           SCROLL-TO-TOP
         ============================================================ */
         .scroll-top {
             position: fixed;
@@ -517,7 +475,7 @@
         }
 
         /* ============================================================
-           COOKIE CONSENT BANNER
+           COOKIE BANNER
         ============================================================ */
         .cookie-banner {
             position: fixed;
@@ -540,10 +498,6 @@
             font-size: 14px;
             flex: 1;
         }
-        .cookie-banner p a {
-            color: #E09E36;
-            text-decoration: underline;
-        }
         .cookie-banner .btn-cookie {
             background: #E09E36;
             color: #0b0b12;
@@ -556,52 +510,6 @@
         }
         .cookie-banner .btn-cookie:hover {
             background: #FFD700;
-        }
-
-        /* ============================================================
-           PRIVACY POLICY & TERMS (Hidden Pages)
-        ============================================================ */
-        .legal-section {
-            padding: 60px 0;
-        }
-        .legal-section h2 {
-            color: #E09E36;
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .legal-section p,
-        .legal-section li {
-            color: #c0c0d0;
-            margin-bottom: 10px;
-        }
-        .legal-section ul {
-            padding-left: 20px;
-        }
-
-        /* ============================================================
-           FOOTER
-        ============================================================ */
-        footer {
-            padding: 40px 0 20px;
-            border-top: 1px solid rgba(224, 158, 54, 0.15);
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-        }
-        footer .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        footer .footer-links a {
-            color: #c0c0d0;
-            transition: 0.3s;
-        }
-        footer .footer-links a:hover {
-            color: #E09E36;
         }
 
         /* ============================================================
@@ -619,8 +527,13 @@
             .hero h1 {
                 font-size: 36px;
             }
-            .about-section .about-grid {
+            .packages-grid {
                 flex-direction: column;
+                align-items: center;
+            }
+            .package-card {
+                max-width: 100%;
+                width: 100%;
             }
             .codes-grid {
                 flex-direction: column;
@@ -630,17 +543,8 @@
                 max-width: 100%;
                 width: 100%;
             }
-            .pricing-grid {
+            .about-section .about-grid {
                 flex-direction: column;
-                align-items: center;
-            }
-            .plan {
-                max-width: 100%;
-                width: 100%;
-            }
-            .portfolio-grid {
-                flex-direction: column;
-                align-items: center;
             }
             .cookie-banner {
                 flex-direction: column;
@@ -666,27 +570,15 @@
                 font-size: 20px;
             }
         }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 28px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 28px;
-            }
-        }
     </style>
 </head>
 <body>
 
     <!-- ============================================================
-    COOKIE CONSENT BANNER
+    COOKIE BANNER
     ============================================================ -->
     <div class="cookie-banner" id="cookieBanner">
-        <p>🍪 We use cookies to improve your experience. By using our site, you agree to our <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a>.</p>
+        <p>🍪 We use cookies to improve your experience. By using our site, you agree to our Privacy Policy and Terms of Service.</p>
         <button class="btn-cookie" onclick="acceptCookies()">Accept</button>
     </div>
 
@@ -697,10 +589,9 @@
         <div class="logo">ACE <span>Enterprise</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#packages">Packages</a></li>
             <li><a href="#codes">Codes</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#contact" class="btn-nav">Get Started</a></li>
@@ -712,8 +603,187 @@
     ============================================================ -->
     <section id="home" class="hero container">
         <h1>ALL-CODES <span>ENTERPRISE</span></h1>
-        <p>Three Codes. Infinite Possibilities. A unified system that replaces 3 separate systems — Design, Errors, and Branding.</p>
-        <a href="#contact" class="btn-hero">🚀 Get Started Today</a>
+        <p>3 Codes · 8 Codes · 13 Codes · One System. Infinite Possibilities.</p>
+        <a href="#packages" class="btn-hero">🚀 Choose Your Package</a>
+    </section>
+
+    <!-- ============================================================
+    PACKAGES
+    ============================================================ -->
+    <section id="packages" class="packages-section container">
+        <h2 class="section-title">📦 Choose Your Package</h2>
+        <p class="section-sub">Pick the system that fits your business.</p>
+        <div class="packages-grid">
+
+            <!-- 3 CODES -->
+            <div class="package-card">
+                <div class="icon">🔰</div>
+                <h3>Startup</h3>
+                <div class="price">$5,000/year</div>
+                <div class="codes-list">
+                    <span>E09E</span>
+                    <span>3603</span>
+                    <span>3903</span>
+                    <br><br>
+                    ✅ 3 Codes<br>
+                    ✅ 500 users<br>
+                    ✅ 1GB storage<br>
+                    ✅ Email support
+                </div>
+                <a href="#contact" class="btn-package">Get Started</a>
+            </div>
+
+            <!-- 8 CODES -->
+            <div class="package-card popular">
+                <span class="badge">⭐ Most Popular</span>
+                <div class="icon">🌟</div>
+                <h3>Enterprise</h3>
+                <div class="price">$25,000/year</div>
+                <div class="codes-list">
+                    <span>E09E</span>
+                    <span>3603</span>
+                    <span>3903</span>
+                    <span>MOON</span>
+                    <span>SUN</span>
+                    <span>STAR</span>
+                    <span>N018</span>
+                    <span>833</span>
+                    <br><br>
+                    ✅ 8 Codes<br>
+                    ✅ Unlimited users<br>
+                    ✅ 5GB storage<br>
+                    ✅ Priority support
+                </div>
+                <a href="#contact" class="btn-package">Get Started</a>
+            </div>
+
+            <!-- 13 CODES -->
+            <div class="package-card">
+                <div class="icon">🌌</div>
+                <h3>Strategic</h3>
+                <div class="price">$100,000+/year</div>
+                <div class="codes-list">
+                    <span>E09E</span>
+                    <span>3603</span>
+                    <span>3903</span>
+                    <span>MOON</span>
+                    <span>SUN</span>
+                    <span>STAR</span>
+                    <span>N018</span>
+                    <span>833</span>
+                    <span>8MAP</span>
+                    <span>CAM8AM</span>
+                    <span>T1F1</span>
+                    <span>1HH1</span>
+                    <span>M0M</span>
+                    <br><br>
+                    ✅ 13 Codes<br>
+                    ✅ Unlimited users<br>
+                    ✅ Unlimited storage<br>
+                    ✅ 24/7 dedicated support
+                </div>
+                <a href="#contact" class="btn-package">Get Started</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CODES DISPLAY
+    ============================================================ -->
+    <section id="codes" class="codes-section container">
+        <h2 class="section-title">🔢 The Codes</h2>
+        <p class="section-sub">3 · 8 · 13 — One system. Infinite possibilities.</p>
+
+        <h3 style="color: #E09E36; margin-bottom: 20px;">3 Foundation Codes</h3>
+        <div class="codes-grid">
+            <div class="code-card gold">
+                <span class="code">E09E</span>
+                <div class="meaning">Brand Identity</div>
+                <div class="error">401 · Foundation</div>
+                <div class="hex">#E09E36</div>
+            </div>
+            <div class="code-card blue">
+                <span class="code">3603</span>
+                <div class="meaning">UI Design</div>
+                <div class="error">429 · Structure</div>
+                <div class="hex">#3603E0</div>
+            </div>
+            <div class="code-card dark-blue">
+                <span class="code">3903</span>
+                <div class="meaning">Security</div>
+                <div class="error">403 · Protection</div>
+                <div class="hex">#3903E0</div>
+            </div>
+        </div>
+
+        <h3 style="color: #E09E36; margin: 40px 0 20px;">5 Expansion Codes</h3>
+        <div class="codes-grid">
+            <div class="code-card silver">
+                <span class="code">MOON</span>
+                <div class="meaning">Night/Loading</div>
+                <div class="error">404 · Stillness</div>
+                <div class="hex">#C0C0C0</div>
+            </div>
+            <div class="code-card yellow">
+                <span class="code">SUN</span>
+                <div class="meaning">Success/Action</div>
+                <div class="error">200 · Energy</div>
+                <div class="hex">#FFD700</div>
+            </div>
+            <div class="code-card white">
+                <span class="code">STAR</span>
+                <div class="meaning">Premium/Achievement</div>
+                <div class="error">201 · Excellence</div>
+                <div class="hex">#FFFFFF</div>
+            </div>
+            <div class="code-card purple">
+                <span class="code">N018</span>
+                <div class="meaning">Wisdom/System</div>
+                <div class="error">500 · Transformation</div>
+                <div class="hex">#800080</div>
+            </div>
+            <div class="code-card teal">
+                <span class="code">833</span>
+                <div class="meaning">Clarity/Connection</div>
+                <div class="error">202 · Flow</div>
+                <div class="hex">#008080</div>
+            </div>
+        </div>
+
+        <h3 style="color: #E09E36; margin: 40px 0 20px;">5 Ultimate Codes</h3>
+        <div class="codes-grid">
+            <div class="code-card" style="border-color: #4A0080;">
+                <span class="code" style="color:#4A0080;">8MAP</span>
+                <div class="meaning">Integration</div>
+                <div class="error">200 · Bridge</div>
+                <div class="hex">#4A0080</div>
+            </div>
+            <div class="code-card" style="border-color: #8B0000;">
+                <span class="code" style="color:#8B0000;">CAM8AM</span>
+                <div class="meaning">Governance</div>
+                <div class="error">503 · Management</div>
+                <div class="hex">#8B0000</div>
+            </div>
+            <div class="code-card" style="border-color: #2B7FFF;">
+                <span class="code" style="color:#2B7FFF;">T1F1</span>
+                <div class="meaning">Flight/Drone</div>
+                <div class="error">410 · Flight</div>
+                <div class="hex">#2B7FFF</div>
+            </div>
+            <div class="code-card" style="border-color: #FFD700;">
+                <span class="code" style="color:#FFD700;">1HH1</span>
+                <div class="meaning">Power</div>
+                <div class="error">503 · Energy</div>
+                <div class="hex">#FFD700</div>
+            </div>
+            <div class="code-card" style="border-color: #FFF8E7;">
+                <span class="code" style="color:#FFF8E7;">M0M</span>
+                <div class="meaning">The Mother Code</div>
+                <div class="error">100 · Origin</div>
+                <div class="hex">#FFF8E7</div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================================
@@ -725,118 +795,22 @@
         <div class="about-grid">
             <div class="about-text">
                 <h3>Who We Are</h3>
-                <p>ALL-CODES ENTERPRISE was born from a vision — three codes that replace three separate systems. We believe in simplicity, consistency, and efficiency.</p>
-                <p style="margin-top:10px;">Our system helps companies build faster, brand better, and handle errors professionally. One system. Three codes. Infinite possibilities.</p>
+                <p>ALL-CODES ENTERPRISE was born from a vision — codes that replace separate systems. We believe in simplicity, consistency, and efficiency.</p>
+                <p style="margin-top:10px;">Our system helps companies build faster, brand better, and handle errors professionally. One system. Infinite possibilities.</p>
             </div>
             <div class="about-stats">
                 <div class="stat-box">
                     <div class="number">3</div>
-                    <div class="label">Codes</div>
+                    <div class="label">Codes (Foundation)</div>
                 </div>
                 <div class="stat-box">
-                    <div class="number">50%+</div>
-                    <div class="label">Faster Development</div>
+                    <div class="number">8</div>
+                    <div class="label">Codes (Complete)</div>
                 </div>
                 <div class="stat-box">
-                    <div class="number">100%</div>
-                    <div class="label">Unified System</div>
+                    <div class="number">13</div>
+                    <div class="label">Codes (Universe)</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    CODES
-    ============================================================ -->
-    <section id="codes" class="codes-section container">
-        <h2 class="section-title">🔢 The 3 Codes</h2>
-        <p class="section-sub">One system. Three codes. Infinite possibilities.</p>
-        <div class="codes-grid">
-            <div class="code-card gold">
-                <span class="code">E09E</span>
-                <div class="meaning">Brand Identity</div>
-                <div class="error">401 · Foundation</div>
-            </div>
-            <div class="code-card blue">
-                <span class="code">3603</span>
-                <div class="meaning">UI Design</div>
-                <div class="error">429 · Structure</div>
-            </div>
-            <div class="code-card dark-blue">
-                <span class="code">3903</span>
-                <div class="meaning">Security</div>
-                <div class="error">403 · Protection</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    PORTFOLIO
-    ============================================================ -->
-    <section id="portfolio" class="portfolio-section container">
-        <h2 class="section-title">📂 Our Portfolio</h2>
-        <p class="section-sub">What we can build for you.</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="icon">🌐</div>
-                <h4>Web Apps</h4>
-                <p>Custom web applications using the 3-code system.</p>
-            </div>
-            <div class="portfolio-item">
-                <div class="icon">📱</div>
-                <h4>Mobile Apps</h4>
-                <p>iOS and Android apps with unified branding.</p>
-            </div>
-            <div class="portfolio-item">
-                <div class="icon">🔗</div>
-                <h4>APIs</h4>
-                <p>Secure and consistent API development.</p>
-            </div>
-            <div class="portfolio-item">
-                <div class="icon">🎨</div>
-                <h4>Design Systems</h4>
-                <p>Complete design systems using your 3 colors.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    PRICING
-    ============================================================ -->
-    <section id="pricing" class="pricing-section container">
-        <h2 class="section-title">💰 Pricing Plans</h2>
-        <p class="section-sub">Choose the plan that fits your business.</p>
-        <div class="pricing-grid">
-            <div class="plan">
-                <h3>Startup</h3>
-                <div class="price">$5,000/yr</div>
-                <ul>
-                    <li>500 users</li>
-                    <li>1GB storage</li>
-                    <li>Email support</li>
-                </ul>
-                <a href="#contact" class="btn-plan">Get Started</a>
-            </div>
-            <div class="plan popular">
-                <span class="badge">⭐ Most Popular</span>
-                <h3>Enterprise</h3>
-                <div class="price">$25,000/yr</div>
-                <ul>
-                    <li>Unlimited users</li>
-                    <li>5GB storage</li>
-                    <li>Priority support</li>
-                </ul>
-                <a href="#contact" class="btn-plan">Get Started</a>
-            </div>
-            <div class="plan">
-                <h3>Strategic</h3>
-                <div class="price">$100,000+/yr</div>
-                <ul>
-                    <li>Unlimited users</li>
-                    <li>Unlimited storage</li>
-                    <li>24/7 dedicated support</li>
-                </ul>
-                <a href="#contact" class="btn-plan">Get Started</a>
             </div>
         </div>
     </section>
@@ -850,11 +824,11 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <div class="question">What is ALL-CODES ENTERPRISE?</div>
-                <div class="answer">It is a unified system that replaces 3 separate systems — Design, Errors, and Branding — with 3 simple codes.</div>
+                <div class="answer">It is a unified system that replaces separate systems — Design, Errors, and Branding — with simple codes.</div>
             </div>
             <div class="faq-item">
                 <div class="question">How does it save 50% development time?</div>
-                <div class="answer">By eliminating the need to manage separate systems for design, errors, and branding. Everything is unified.</div>
+                <div class="answer">By eliminating the need to manage separate systems. Everything is unified.</div>
             </div>
             <div class="faq-item">
                 <div class="question">Is it for my company?</div>
@@ -862,21 +836,13 @@
             </div>
             <div class="faq-item">
                 <div class="question">What do I get when I buy?</div>
-                <div class="answer">3 codes, complete software, design system, error system, documentation, and support.</div>
+                <div class="answer">Complete system, documentation, support, and your chosen codes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Can I start with 3 codes and upgrade later?</div>
+                <div class="answer">Yes! You can start with Startup and upgrade to Enterprise or Strategic anytime.</div>
             </div>
         </div>
-    </section>
-
-    <!-- ============================================================
-    NEWSLETTER
-    ============================================================ -->
-    <section class="newsletter-section container">
-        <h2 class="section-title">📧 Join Our Newsletter</h2>
-        <p class="section-sub">Get updates on new features and exclusive offers.</p>
-        <form class="newsletter-form" action="https://formsubmit.co/allcodeenterprise@gmail.com" method="POST">
-            <input type="email" name="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
-        </form>
     </section>
 
     <!-- ============================================================
@@ -897,52 +863,16 @@
     </section>
 
     <!-- ============================================================
-    PRIVACY POLICY (Hidden Section)
-    ============================================================ -->
-    <section id="privacy" class="legal-section container" style="display:none;">
-        <h2>🔒 Privacy Policy</h2>
-        <p>Last updated: 2026</p>
-        <p>ALL-CODES ENTERPRISE respects your privacy. This policy explains how we collect, use, and protect your personal information.</p>
-        <p><strong>Information we collect:</strong></p>
-        <ul>
-            <li>Name and email address (from contact form)</li>
-            <li>Messages you send us</li>
-        </ul>
-        <p><strong>How we use it:</strong></p>
-        <ul>
-            <li>To respond to your inquiries</li>
-            <li>To send you updates (if you subscribe)</li>
-        </ul>
-        <p><strong>Data protection:</strong> We do not share your data with third parties.</p>
-    </section>
-
-    <!-- ============================================================
-    TERMS OF SERVICE (Hidden Section)
-    ============================================================ -->
-    <section id="terms" class="legal-section container" style="display:none;">
-        <h2>📜 Terms of Service</h2>
-        <p>Last updated: 2026</p>
-        <p>By using ALL-CODES ENTERPRISE, you agree to these terms.</p>
-        <p><strong>Use of the system:</strong> The system is provided "as is" for your business use.</p>
-        <p><strong>Payment:</strong> Plans are billed annually. Refunds are provided within 30 days.</p>
-        <p><strong>Support:</strong> Support is provided based on your plan.</p>
-        <p><strong>Changes:</strong> We may update these terms. Continued use means you accept the changes.</p>
-    </section>
-
-    <!-- ============================================================
     FOOTER
     ============================================================ -->
     <footer class="container">
         <div class="footer-links">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#packages">Packages</a>
             <a href="#codes">Codes</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
-            <a href="#privacy" onclick="showLegal('privacy')">Privacy</a>
-            <a href="#terms" onclick="showLegal('terms')">Terms</a>
         </div>
         <p>&copy; 2026 ALL-CODES ENTERPRISE. All rights reserved.</p>
         <p>Created by Jubril Aminu</p>
@@ -950,16 +880,14 @@
     </footer>
 
     <!-- ============================================================
-    LIVE CHAT (Floating WhatsApp)
+    LIVE CHAT
     ============================================================ -->
     <div class="live-chat">
-        <a href="https://wa.me/2348106207182" target="_blank" title="Chat on WhatsApp">
-            💬
-        </a>
+        <a href="https://wa.me/2348106207182" target="_blank" title="Chat on WhatsApp">💬</a>
     </div>
 
     <!-- ============================================================
-    SCROLL-TO-TOP BUTTON
+    SCROLL-TO-TOP
     ============================================================ -->
     <div class="scroll-top" id="scrollTop">
         <a href="#" title="Back to top">⬆</a>
@@ -969,19 +897,18 @@
     JAVASCRIPT
     ============================================================ -->
     <script>
-        // ===================== COOKIE CONSENT =====================
+        // Cookie Consent
         function acceptCookies() {
             document.getElementById('cookieBanner').style.display = 'none';
             localStorage.setItem('cookiesAccepted', 'true');
         }
 
-        // Check if cookies were already accepted
         window.onload = function() {
             if (localStorage.getItem('cookiesAccepted') !== 'true') {
                 document.getElementById('cookieBanner').style.display = 'flex';
             }
 
-            // Show scroll-to-top button
+            // Scroll-to-top button
             var scrollBtn = document.getElementById('scrollTop');
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 300) {
@@ -992,19 +919,7 @@
             });
         };
 
-        // ===================== SHOW LEGAL PAGES =====================
-        function showLegal(page) {
-            // Hide all sections
-            document.querySelectorAll('.legal-section').forEach(function(el) {
-                el.style.display = 'none';
-            });
-            // Show selected section
-            document.getElementById(page).style.display = 'block';
-            // Scroll to it
-            document.getElementById(page).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // ===================== SMOOTH SCROLL FOR NAV =====================
+        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 var target = document.querySelector(this.getAttribute('href'));
