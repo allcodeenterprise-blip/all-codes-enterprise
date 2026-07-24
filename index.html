@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALL-CODES ENTERPRISE</title>
     <style>
+        /* ============================================================
+           RESET & BASE
+        ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +40,9 @@
             margin-bottom: 40px;
         }
 
-        /* NAVIGATION */
+        /* ============================================================
+           NAVIGATION
+        ============================================================ */
         nav {
             display: flex;
             justify-content: space-between;
@@ -78,7 +83,9 @@
             background: #FFD700;
         }
 
-        /* HERO */
+        /* ============================================================
+           HERO
+        ============================================================ */
         .hero {
             text-align: center;
             padding: 80px 0 60px;
@@ -112,7 +119,49 @@
             transform: scale(1.05);
         }
 
-        /* ABOUT */
+        /* ============================================================
+           PORTFOLIO
+        ============================================================ */
+        .portfolio-section {
+            padding: 60px 0;
+        }
+        .portfolio-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portfolio-item {
+            background: rgba(18, 18, 32, 0.7);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            max-width: 300px;
+            flex: 1;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .portfolio-item:hover {
+            border-color: #E09E36;
+            transform: translateY(-5px);
+        }
+        .portfolio-item .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .portfolio-item h4 {
+            color: #E09E36;
+            font-size: 20px;
+        }
+        .portfolio-item p {
+            color: #c0c0d0;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* ============================================================
+           ABOUT
+        ============================================================ */
         .about-section {
             padding: 60px 0;
         }
@@ -156,7 +205,9 @@
             font-size: 14px;
         }
 
-        /* CODES */
+        /* ============================================================
+           CODES
+        ============================================================ */
         .codes-section {
             padding: 60px 0;
             text-align: center;
@@ -206,7 +257,9 @@
             color: #3903E0;
         }
 
-        /* PRICING */
+        /* ============================================================
+           PRICING
+        ============================================================ */
         .pricing-section {
             padding: 60px 0;
             text-align: center;
@@ -278,7 +331,9 @@
             font-weight: bold;
         }
 
-        /* FAQ */
+        /* ============================================================
+           FAQ
+        ============================================================ */
         .faq-section {
             padding: 60px 0;
         }
@@ -308,7 +363,9 @@
             margin-top: 8px;
         }
 
-        /* NEWSLETTER */
+        /* ============================================================
+           NEWSLETTER
+        ============================================================ */
         .newsletter-section {
             padding: 60px 0;
             text-align: center;
@@ -346,7 +403,9 @@
             background: #FFD700;
         }
 
-        /* CONTACT */
+        /* ============================================================
+           CONTACT
+        ============================================================ */
         .contact-section {
             padding: 60px 0;
             text-align: center;
@@ -395,7 +454,134 @@
             background: #128C7E;
         }
 
-        /* FOOTER */
+        /* ============================================================
+           LIVE CHAT (Floating Button)
+        ============================================================ */
+        .live-chat {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+        .live-chat a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .live-chat a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+        .live-chat a span {
+            font-size: 12px;
+            display: none;
+        }
+
+        /* ============================================================
+           SCROLL-TO-TOP BUTTON
+        ============================================================ */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 999;
+            display: none;
+        }
+        .scroll-top a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #E09E36;
+            color: #0b0b12;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(224, 158, 54, 0.3);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .scroll-top a:hover {
+            transform: scale(1.1);
+            background: #FFD700;
+        }
+
+        /* ============================================================
+           COOKIE CONSENT BANNER
+        ============================================================ */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a2a;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-top: 2px solid #E09E36;
+            z-index: 1000;
+            display: none;
+        }
+        .cookie-banner p {
+            color: #c0c0d0;
+            font-size: 14px;
+            flex: 1;
+        }
+        .cookie-banner p a {
+            color: #E09E36;
+            text-decoration: underline;
+        }
+        .cookie-banner .btn-cookie {
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .cookie-banner .btn-cookie:hover {
+            background: #FFD700;
+        }
+
+        /* ============================================================
+           PRIVACY POLICY & TERMS (Hidden Pages)
+        ============================================================ */
+        .legal-section {
+            padding: 60px 0;
+        }
+        .legal-section h2 {
+            color: #E09E36;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .legal-section p,
+        .legal-section li {
+            color: #c0c0d0;
+            margin-bottom: 10px;
+        }
+        .legal-section ul {
+            padding-left: 20px;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
         footer {
             padding: 40px 0 20px;
             border-top: 1px solid rgba(224, 158, 54, 0.15);
@@ -418,6 +604,9 @@
             color: #E09E36;
         }
 
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -449,18 +638,68 @@
                 max-width: 100%;
                 width: 100%;
             }
+            .portfolio-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            .live-chat {
+                bottom: 20px;
+                right: 20px;
+            }
+            .live-chat a {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+            .scroll-top {
+                bottom: 85px;
+                right: 20px;
+            }
+            .scroll-top a {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- ============================================================
+    COOKIE CONSENT BANNER
+    ============================================================ -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>🍪 We use cookies to improve your experience. By using our site, you agree to our <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a>.</p>
+        <button class="btn-cookie" onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
     <nav class="container">
         <div class="logo">ACE <span>Enterprise</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#codes">Codes</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -468,14 +707,18 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
     <section id="home" class="hero container">
         <h1>ALL-CODES <span>ENTERPRISE</span></h1>
         <p>Three Codes. Infinite Possibilities. A unified system that replaces 3 separate systems — Design, Errors, and Branding.</p>
         <a href="#contact" class="btn-hero">🚀 Get Started Today</a>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ============================================================
+    ABOUT
+    ============================================================ -->
     <section id="about" class="about-section container">
         <h2 class="section-title">About Us</h2>
         <p class="section-sub">Building the future of design and development.</p>
@@ -502,7 +745,9 @@
         </div>
     </section>
 
-    <!-- CODES -->
+    <!-- ============================================================
+    CODES
+    ============================================================ -->
     <section id="codes" class="codes-section container">
         <h2 class="section-title">🔢 The 3 Codes</h2>
         <p class="section-sub">One system. Three codes. Infinite possibilities.</p>
@@ -525,7 +770,39 @@
         </div>
     </section>
 
-    <!-- PRICING -->
+    <!-- ============================================================
+    PORTFOLIO
+    ============================================================ -->
+    <section id="portfolio" class="portfolio-section container">
+        <h2 class="section-title">📂 Our Portfolio</h2>
+        <p class="section-sub">What we can build for you.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="icon">🌐</div>
+                <h4>Web Apps</h4>
+                <p>Custom web applications using the 3-code system.</p>
+            </div>
+            <div class="portfolio-item">
+                <div class="icon">📱</div>
+                <h4>Mobile Apps</h4>
+                <p>iOS and Android apps with unified branding.</p>
+            </div>
+            <div class="portfolio-item">
+                <div class="icon">🔗</div>
+                <h4>APIs</h4>
+                <p>Secure and consistent API development.</p>
+            </div>
+            <div class="portfolio-item">
+                <div class="icon">🎨</div>
+                <h4>Design Systems</h4>
+                <p>Complete design systems using your 3 colors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PRICING
+    ============================================================ -->
     <section id="pricing" class="pricing-section container">
         <h2 class="section-title">💰 Pricing Plans</h2>
         <p class="section-sub">Choose the plan that fits your business.</p>
@@ -564,7 +841,9 @@
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- ============================================================
+    FAQ
+    ============================================================ -->
     <section id="faq" class="faq-section container">
         <h2 class="section-title">❓ Frequently Asked Questions</h2>
         <p class="section-sub">Common questions about ALL-CODES ENTERPRISE.</p>
@@ -588,7 +867,9 @@
         </div>
     </section>
 
-    <!-- NEWSLETTER -->
+    <!-- ============================================================
+    NEWSLETTER
+    ============================================================ -->
     <section class="newsletter-section container">
         <h2 class="section-title">📧 Join Our Newsletter</h2>
         <p class="section-sub">Get updates on new features and exclusive offers.</p>
@@ -598,7 +879,9 @@
         </form>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ============================================================
+    CONTACT
+    ============================================================ -->
     <section id="contact" class="contact-section container">
         <h2 class="section-title">📩 Contact Me</h2>
         <p class="section-sub">Reach out and let's build something amazing together.</p>
@@ -613,20 +896,125 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ============================================================
+    PRIVACY POLICY (Hidden Section)
+    ============================================================ -->
+    <section id="privacy" class="legal-section container" style="display:none;">
+        <h2>🔒 Privacy Policy</h2>
+        <p>Last updated: 2026</p>
+        <p>ALL-CODES ENTERPRISE respects your privacy. This policy explains how we collect, use, and protect your personal information.</p>
+        <p><strong>Information we collect:</strong></p>
+        <ul>
+            <li>Name and email address (from contact form)</li>
+            <li>Messages you send us</li>
+        </ul>
+        <p><strong>How we use it:</strong></p>
+        <ul>
+            <li>To respond to your inquiries</li>
+            <li>To send you updates (if you subscribe)</li>
+        </ul>
+        <p><strong>Data protection:</strong> We do not share your data with third parties.</p>
+    </section>
+
+    <!-- ============================================================
+    TERMS OF SERVICE (Hidden Section)
+    ============================================================ -->
+    <section id="terms" class="legal-section container" style="display:none;">
+        <h2>📜 Terms of Service</h2>
+        <p>Last updated: 2026</p>
+        <p>By using ALL-CODES ENTERPRISE, you agree to these terms.</p>
+        <p><strong>Use of the system:</strong> The system is provided "as is" for your business use.</p>
+        <p><strong>Payment:</strong> Plans are billed annually. Refunds are provided within 30 days.</p>
+        <p><strong>Support:</strong> Support is provided based on your plan.</p>
+        <p><strong>Changes:</strong> We may update these terms. Continued use means you accept the changes.</p>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
     <footer class="container">
         <div class="footer-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#codes">Codes</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
+            <a href="#privacy" onclick="showLegal('privacy')">Privacy</a>
+            <a href="#terms" onclick="showLegal('terms')">Terms</a>
         </div>
         <p>&copy; 2026 ALL-CODES ENTERPRISE. All rights reserved.</p>
         <p>Created by Jubril Aminu</p>
         <p>📞 +234 810 620 7182</p>
     </footer>
+
+    <!-- ============================================================
+    LIVE CHAT (Floating WhatsApp)
+    ============================================================ -->
+    <div class="live-chat">
+        <a href="https://wa.me/2348106207182" target="_blank" title="Chat on WhatsApp">
+            💬
+        </a>
+    </div>
+
+    <!-- ============================================================
+    SCROLL-TO-TOP BUTTON
+    ============================================================ -->
+    <div class="scroll-top" id="scrollTop">
+        <a href="#" title="Back to top">⬆</a>
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ===================== COOKIE CONSENT =====================
+        function acceptCookies() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        // Check if cookies were already accepted
+        window.onload = function() {
+            if (localStorage.getItem('cookiesAccepted') !== 'true') {
+                document.getElementById('cookieBanner').style.display = 'flex';
+            }
+
+            // Show scroll-to-top button
+            var scrollBtn = document.getElementById('scrollTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+            });
+        };
+
+        // ===================== SHOW LEGAL PAGES =====================
+        function showLegal(page) {
+            // Hide all sections
+            document.querySelectorAll('.legal-section').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            // Show selected section
+            document.getElementById(page).style.display = 'block';
+            // Scroll to it
+            document.getElementById(page).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ===================== SMOOTH SCROLL FOR NAV =====================
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
