@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALL-CODES ENTERPRISE</title>
     <style>
-        /* ===== RESET ===== */
+        /* ============================================================
+           RESET & BASE
+        ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -26,8 +28,21 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+        .section-title {
+            font-size: 36px;
+            color: #E09E36;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #c0c0d0;
+            margin-bottom: 40px;
+        }
 
-        /* ===== NAVIGATION ===== */
+        /* ============================================================
+           NAVIGATION
+        ============================================================ */
         nav {
             display: flex;
             justify-content: space-between;
@@ -68,7 +83,9 @@
             background: #FFD700;
         }
 
-        /* ===== HERO ===== */
+        /* ============================================================
+           HERO
+        ============================================================ */
         .hero {
             text-align: center;
             padding: 80px 0 60px;
@@ -102,19 +119,58 @@
             transform: scale(1.05);
         }
 
-        /* ===== CODES ===== */
+        /* ============================================================
+           ABOUT
+        ============================================================ */
+        .about-section {
+            padding: 60px 0;
+        }
+        .about-section .about-grid {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about-section .about-text {
+            flex: 2;
+        }
+        .about-section .about-text h3 {
+            color: #E09E36;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .about-section .about-text p {
+            color: #c0c0d0;
+        }
+        .about-section .about-stats {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .about-section .stat-box {
+            background: rgba(18, 18, 32, 0.7);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            text-align: center;
+        }
+        .about-section .stat-box .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        .about-section .stat-box .label {
+            color: #c0c0d0;
+            font-size: 14px;
+        }
+
+        /* ============================================================
+           CODES
+        ============================================================ */
         .codes-section {
             padding: 60px 0;
             text-align: center;
-        }
-        .codes-section h2 {
-            font-size: 36px;
-            color: #E09E36;
-            margin-bottom: 10px;
-        }
-        .codes-section p {
-            color: #c0c0d0;
-            margin-bottom: 30px;
         }
         .codes-grid {
             display: flex;
@@ -151,23 +207,58 @@
             color: #888;
             margin-top: 4px;
         }
-        .gold .code { color: #E09E36; }
-        .blue .code { color: #3603E0; }
-        .dark-blue .code { color: #3903E0; }
+        .gold .code {
+            color: #E09E36;
+        }
+        .blue .code {
+            color: #3603E0;
+        }
+        .dark-blue .code {
+            color: #3903E0;
+        }
 
-        /* ===== PRICING ===== */
+        /* ============================================================
+           TESTIMONIALS
+        ============================================================ */
+        .testimonials-section {
+            padding: 60px 0;
+        }
+        .testimonials-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .testimonial {
+            background: rgba(18, 18, 32, 0.7);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            max-width: 320px;
+            flex: 1;
+            text-align: center;
+        }
+        .testimonial .quote {
+            color: #c0c0d0;
+            font-style: italic;
+            font-size: 16px;
+        }
+        .testimonial .author {
+            color: #E09E36;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .testimonial .title {
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* ============================================================
+           PRICING
+        ============================================================ */
         .pricing-section {
             padding: 60px 0;
             text-align: center;
-        }
-        .pricing-section h2 {
-            font-size: 36px;
-            color: #E09E36;
-            margin-bottom: 10px;
-        }
-        .pricing-section p {
-            color: #c0c0d0;
-            margin-bottom: 30px;
         }
         .pricing-grid {
             display: flex;
@@ -236,19 +327,112 @@
             font-weight: bold;
         }
 
-        /* ===== CONTACT ===== */
-        .contact-section {
+        /* ============================================================
+           FAQ
+        ============================================================ */
+        .faq-section {
+            padding: 60px 0;
+        }
+        .faq-grid {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: rgba(18, 18, 32, 0.5);
+            padding: 20px 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(224, 158, 54, 0.1);
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .faq-item:hover {
+            border-color: #E09E36;
+        }
+        .faq-item .question {
+            color: #E09E36;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .faq-item .answer {
+            color: #c0c0d0;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        /* ============================================================
+           CLIENTS / PARTNERS
+        ============================================================ */
+        .clients-section {
             padding: 60px 0;
             text-align: center;
         }
-        .contact-section h2 {
-            font-size: 36px;
-            color: #E09E36;
-            margin-bottom: 10px;
+        .clients-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
-        .contact-section p {
-            color: #c0c0d0;
-            margin-bottom: 30px;
+        .client-logo {
+            background: rgba(18, 18, 32, 0.5);
+            padding: 20px 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(224, 158, 54, 0.1);
+            color: #888;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .client-logo:hover {
+            border-color: #E09E36;
+            color: #E09E36;
+        }
+
+        /* ============================================================
+           NEWSLETTER
+        ============================================================ */
+        .newsletter-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .newsletter-form {
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px;
+            background: #1a1a2a;
+            color: #f0f0f8;
+            border: 1px solid #333;
+            border-radius: 30px;
+            font-size: 16px;
+            min-width: 200px;
+        }
+        .newsletter-form button {
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .newsletter-form button:hover {
+            background: #FFD700;
+        }
+
+        /* ============================================================
+           CONTACT
+        ============================================================ */
+        .contact-section {
+            padding: 60px 0;
+            text-align: center;
         }
         .contact-form {
             max-width: 500px;
@@ -294,7 +478,9 @@
             background: #128C7E;
         }
 
-        /* ===== FOOTER ===== */
+        /* ============================================================
+           FOOTER
+        ============================================================ */
         footer {
             padding: 40px 0 20px;
             border-top: 1px solid rgba(224, 158, 54, 0.15);
@@ -317,7 +503,9 @@
             color: #E09E36;
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -329,6 +517,9 @@
             }
             .hero h1 {
                 font-size: 36px;
+            }
+            .about-section .about-grid {
+                flex-direction: column;
             }
             .codes-grid {
                 flex-direction: column;
@@ -346,34 +537,86 @@
                 max-width: 100%;
                 width: 100%;
             }
+            .testimonials-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .clients-grid {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== NAVIGATION ===== -->
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
     <nav class="container">
         <div class="logo">ACE <span>Enterprise</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#codes">Codes</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#contact" class="btn-nav">Get Started</a></li>
         </ul>
     </nav>
 
-    <!-- ===== HERO ===== -->
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
     <section id="home" class="hero container">
         <h1>ALL-CODES <span>ENTERPRISE</span></h1>
         <p>Three Codes. Infinite Possibilities. A unified system that replaces 3 separate systems — Design, Errors, and Branding.</p>
         <a href="#contact" class="btn-hero">🚀 Get Started Today</a>
     </section>
 
-    <!-- ===== CODES ===== -->
+    <!-- ============================================================
+    ABOUT
+    ============================================================ -->
+    <section id="about" class="about-section container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-sub">Building the future of design and development.</p>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Who We Are</h3>
+                <p>
+                    ALL-CODES ENTERPRISE was born from a vision — three codes that replace three separate systems.
+                    We believe in simplicity, consistency, and efficiency.
+                </p>
+                <p style="margin-top:10px;">
+                    Our system helps companies build faster, brand better, and handle errors professionally.
+                    One system. Three codes. Infinite possibilities.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="number">3</div>
+                    <div class="label">Codes</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">50%+</div>
+                    <div class="label">Faster Development</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">100%</div>
+                    <div class="label">Unified System</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CODES
+    ============================================================ -->
     <section id="codes" class="codes-section container">
-        <h2>🔢 The 3 Codes</h2>
-        <p>One system. Three codes. Infinite possibilities.</p>
+        <h2 class="section-title">🔢 The 3 Codes</h2>
+        <p class="section-sub">One system. Three codes. Infinite possibilities.</p>
         <div class="codes-grid">
             <div class="code-card gold">
                 <span class="code">E09E</span>
@@ -393,10 +636,37 @@
         </div>
     </section>
 
-    <!-- ===== PRICING ===== -->
+    <!-- ============================================================
+    TESTIMONIALS
+    ============================================================ -->
+    <section id="testimonials" class="testimonials-section container">
+        <h2 class="section-title">💬 What Our Clients Say</h2>
+        <p class="section-sub">Real feedback from real businesses.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="quote">"ALL-CODES ENTERPRISE saved us 50% on development time. The 3 codes are genius!"</div>
+                <div class="author">— John Doe</div>
+                <div class="title">CTO, TechStart</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"Finally, one system instead of three. Our branding and development are now unified."</div>
+                <div class="author">— Jane Smith</div>
+                <div class="title">Product Lead, DesignHub</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"E09E, 3603, 3903 — we use them everywhere. It's simple and powerful."</div>
+                <div class="author">— Samuel Lee</div>
+                <div class="title">Founder, AppForge</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PRICING
+    ============================================================ -->
     <section id="pricing" class="pricing-section container">
-        <h2>💰 Pricing Plans</h2>
-        <p>Choose the plan that fits your business.</p>
+        <h2 class="section-title">💰 Pricing Plans</h2>
+        <p class="section-sub">Choose the plan that fits your business.</p>
         <div class="pricing-grid">
             <div class="plan">
                 <h3>Startup</h3>
@@ -432,10 +702,65 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ============================================================
+    FAQ
+    ============================================================ -->
+    <section id="faq" class="faq-section container">
+        <h2 class="section-title">❓ Frequently Asked Questions</h2>
+        <p class="section-sub">Common questions about ALL-CODES ENTERPRISE.</p>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="question">What is ALL-CODES ENTERPRISE?</div>
+                <div class="answer">It is a unified system that replaces 3 separate systems — Design, Errors, and Branding — with 3 simple codes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">How does it save 50% development time?</div>
+                <div class="answer">By eliminating the need to manage separate systems for design, errors, and branding. Everything is unified.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Is it for my company?</div>
+                <div class="answer">Yes — it works for any company building web apps, mobile apps, or APIs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">What do I get when I buy?</div>
+                <div class="answer">3 codes, complete software, design system, error system, documentation, and support.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CLIENTS / PARTNERS
+    ============================================================ -->
+    <section class="clients-section container">
+        <h2 class="section-title">🤝 Trusted By</h2>
+        <p class="section-sub">Companies that use ALL-CODES ENTERPRISE.</p>
+        <div class="clients-grid">
+            <div class="client-logo">🌐 TechStart</div>
+            <div class="client-logo">🎨 DesignHub</div>
+            <div class="client-logo">⚙️ AppForge</div>
+            <div class="client-logo">📱 MobileFlow</div>
+            <div class="client-logo">🏢 Enterprise Co</div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    NEWSLETTER
+    ============================================================ -->
+    <section class="newsletter-section container">
+        <h2 class="section-title">📧 Join Our Newsletter</h2>
+        <p class="section-sub">Get updates on new features and exclusive offers.</p>
+        <form class="newsletter-form" action="https://formsubmit.co/allcodeenterprise@gmail.com" method="POST">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- ============================================================
+    CONTACT
+    ============================================================ -->
     <section id="contact" class="contact-section container">
-        <h2>📩 Contact Me</h2>
-        <p>Reach out and let's build something amazing together.</p>
+        <h2 class="section-title">📩 Contact Me</h2>
+        <p class="section-sub">Reach out and let's build something amazing together.</p>
         <div class="contact-form">
             <form action="https://formsubmit.co/allcodeenterprise@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -447,12 +772,17 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
     <footer class="container">
         <div class="footer-links">
             <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#codes">Codes</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
         </div>
         <p>&copy; 2026 ALL-CODES ENTERPRISE. All rights reserved.</p>
