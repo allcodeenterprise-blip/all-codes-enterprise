@@ -68,6 +68,106 @@
             line-height: 2;
         }
         .details span { color: #E09E36; font-weight: bold; }
+
+        /* WHATSAPP BUTTON */
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        /* GET STARTED BUTTON */
+        .get-started-btn {
+            display: inline-block;
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .get-started-btn:hover {
+            background: #FFD700;
+            transform: scale(1.05);
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+        .pricing-plans {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .plan {
+            background: rgba(18, 18, 32, 0.5);
+            padding: 20px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            min-width: 180px;
+            flex: 1;
+        }
+        .plan h4 {
+            color: #E09E36;
+            font-size: 20px;
+        }
+        .plan .price {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        .plan ul li {
+            padding: 4px 0;
+            color: #c0c0d0;
+        }
+
+        /* CONTACT FORM */
+        .contact-form {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #1a1a2a;
+            color: #f0f0f8;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        .contact-form button {
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #FFD700;
+        }
+
         .tagline {
             color: #888;
             font-size: 14px;
@@ -97,6 +197,62 @@
             <p>🔴 <span>E09E</span> = Gold + 401 + Brand Identity</p>
             <p>🔵 <span>3603</span> = Blue + 429 + UI Design</p>
             <p>🟣 <span>3903</span> = Dark Blue + 403 + Security</p>
+        </div>
+
+        <!-- WHATSAPP BUTTON -->
+        <a href="https://wa.me/2348106207182" class="whatsapp-btn">
+            💬 Chat on WhatsApp
+        </a>
+
+        <!-- GET STARTED BUTTON -->
+        <br>
+        <a href="https://wa.me/2348106207182" class="get-started-btn">
+            🚀 Get Started Now
+        </a>
+
+        <!-- PRICING SECTION -->
+        <div class="pricing">
+            <h3>💰 Pricing Plans</h3>
+            <div class="pricing-plans">
+                <div class="plan">
+                    <h4>Startup</h4>
+                    <p class="price">$5,000/year</p>
+                    <ul>
+                        <li>500 users</li>
+                        <li>1GB storage</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h4>Enterprise</h4>
+                    <p class="price">$25,000/year</p>
+                    <ul>
+                        <li>Unlimited users</li>
+                        <li>5GB storage</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h4>Strategic</h4>
+                    <p class="price">$100,000+/year</p>
+                    <ul>
+                        <li>Unlimited users</li>
+                        <li>Unlimited storage</li>
+                        <li>24/7 dedicated support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+            <h3>📩 Contact Me</h3>
+            <form action="https://formsubmit.co/allcodeenterprise@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
 
         <div class="tagline">
