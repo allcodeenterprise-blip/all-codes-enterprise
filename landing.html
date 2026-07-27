@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALL-CODES ENTERPRISE — Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0b12;
+            color: #f0f0f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        /* ===== CARD ===== */
+        .landing {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(18, 18, 32, 0.92);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(224, 158, 54, 0.15);
+            border-radius: 2.5rem;
+            padding: 3.5rem 3rem;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        /* ===== E09E — Brand ===== */
+        .brand {
+            font-size: 1.6rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #E09E36, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== 21 Codes Badge ===== */
+        .badge {
+            display: inline-block;
+            background: rgba(224, 158, 54, 0.06);
+            border: 1px solid rgba(224, 158, 54, 0.1);
+            padding: 0.3rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            color: #E09E36;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* ===== Main Headline ===== */
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 .gold {
+            background: linear-gradient(135deg, #E09E36, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== Subtext ===== */
+        .subtext {
+            font-size: 1.1rem;
+            color: #C0C0C0;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* ===== Features Grid ===== */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            text-align: left;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(192, 192, 192, 0.04);
+            border-radius: 1rem;
+            padding: 1.5rem 1.2rem;
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            border-color: #E09E36;
+        }
+
+        .feature .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f0f0f8;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature p {
+            font-size: 0.85rem;
+            color: #9090a8;
+        }
+
+        /* ===== SUN — Action Button ===== */
+        .btn {
+            display: inline-block;
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 0.9rem 2.8rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(224, 158, 54, 0.3);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 0.7rem;
+            color: #404058;
+            border-top: 1px solid rgba(192, 192, 192, 0.04);
+            padding-top: 1.5rem;
+        }
+
+        .footer .code-badge {
+            font-family: monospace;
+            font-size: 0.6rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            border: 1px solid rgba(192, 192, 192, 0.06);
+            color: #606078;
+        }
+
+        .footer .gold {
+            color: #E09E36;
+            border-color: #E09E36;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .landing {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .brand {
+                font-size: 1.2rem;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing">
+
+        <!-- ===== E09E — Brand ===== -->
+        <div class="brand">✦ ALL-CODES ENTERPRISE</div>
+        <div class="badge">21 Codes · One System · Infinite Possibilities</div>
+
+        <!-- ===== Headline ===== -->
+        <h1>
+            Build Faster with<br />
+            <span class="gold">Unified Codes</span>
+        </h1>
+
+        <p class="subtext">
+            A complete system for branding, design, security, and connection — powered by 21 codes.
+        </p>
+
+        <!-- ===== Features ===== -->
+        <div class="features">
+            <div class="feature">
+                <div class="icon">🎨</div>
+                <h3>Brand Identity</h3>
+                <p>E09E — Define who you are</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🛠️</div>
+                <h3>UI Design</h3>
+                <p>3603 — Structure your vision</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Security</h3>
+                <p>3903 — Protect your system</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🌍</div>
+                <h3>Connection</h3>
+                <p>833 — Connect with your audience</p>
+            </div>
+        </div>
+
+        <!-- ===== SUN — Action ===== -->
+        <a href="#" class="btn">Get Started Now</a>
+
+        <!-- ===== Footer ===== -->
+        <div class="footer">
+            <span class="code-badge gold">E09E</span>
+            <span class="code-badge">3603</span>
+            <span class="code-badge">3903</span>
+            <span class="code-badge">MOON</span>
+            <span class="code-badge">SUN</span>
+            <span class="code-badge">STAR</span>
+            <span class="code-badge">N018</span>
+            <span class="code-badge">833</span>
+            <span class="code-badge">8MAP</span>
+            <span class="code-badge">CAM8AM</span>
+            <span class="code-badge">T1F1</span>
+            <span class="code-badge">11</span>
+            <span class="code-badge">LIFE</span>
+            <span class="code-badge">585</span>
+            <span class="code-badge">RED</span>
+            <span class="code-badge">ORANGE</span>
+            <span class="code-badge">YELLOW</span>
+            <span class="code-badge">GREEN</span>
+            <span class="code-badge">BLUE</span>
+            <span class="code-badge">INDIGO</span>
+            <span class="code-badge">PINK</span>
+            <p style="margin-top:1rem;">© 2026 ALL-CODES ENTERPRISE</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
