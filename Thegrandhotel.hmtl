@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Grand Cherokee — Luxury Hotel</title>
+    <!-- Google Fonts: Playfair Display + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f0eb;
+            color: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .landing {
+            max-width: 1200px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2.5rem;
+            padding: 2.5rem 3rem 2rem;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .landing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #E09E36, #FFD700, #E09E36);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: 0.02em;
+        }
+
+        .nav .logo span {
+            color: #E09E36;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a4a5a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #E09E36;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #f0ede8;
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: #1a1a2e;
+            padding: 0.3rem 0.5rem;
+            outline: none;
+            font-size: 0.85rem;
+            width: 120px;
+        }
+
+        .search-bar input::placeholder {
+            color: #a0a0b0;
+        }
+
+        .search-bar .icon {
+            color: #a0a0b0;
+            font-size: 0.9rem;
+        }
+
+        .btn-login {
+            color: #E09E36;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0 1rem;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: rgba(224, 158, 54, 0.08);
+            border: 1px solid rgba(224, 158, 54, 0.12);
+            padding: 0.3rem 1.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            color: #E09E36;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #1a1a2e;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero h1 .gold {
+            color: #E09E36;
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #6a6a7a;
+            max-width: 550px;
+            margin: 0.5rem auto 1rem;
+            font-style: italic;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            color: #a0a0b0;
+            font-weight: 300;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero .location .pin {
+            color: #E09E36;
+        }
+
+        .hero .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #E09E36;
+            color: #ffffff;
+            padding: 0.9rem 3rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #c98a2e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(224, 158, 54, 0.2);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #1a1a2e;
+            padding: 0.9rem 3rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 1px solid #d0d0d8;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: #E09E36;
+            color: #E09E36;
+            transform: translateY(-3px);
+        }
+
+        /* ===== IMAGE SECTION ===== */
+        .hero-image {
+            width: 100%;
+            height: 380px;
+            border-radius: 2rem;
+            margin: 2rem 0 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+
+        /* ===== FEATURES WITH IMAGES ===== */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .feature {
+            text-align: center;
+            transition: 0.3s;
+            padding: 0.5rem;
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature .feature-image {
+            width: 100%;
+            height: 160px;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.2rem;
+        }
+
+        .feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature p {
+            font-size: 0.85rem;
+            color: #8a8a9a;
+            font-weight: 300;
+        }
+
+        /* ===== TESTIMONIAL ===== */
+        .testimonial {
+            margin: 2.5rem auto 0;
+            max-width: 650px;
+            background: #f8f6f2;
+            border-radius: 1.5rem;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            border-left: 4px solid #E09E36;
+        }
+
+        .testimonial .quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #3a3a4a;
+            font-weight: 400;
+        }
+
+        .testimonial .author {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .testimonial .author span {
+            color: #E09E36;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.7rem;
+            color: #a0a0b0;
+        }
+
+        .footer .codes {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer .code-badge {
+            font-family: monospace;
+            font-size: 0.55rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            color: #b0b0c0;
+        }
+
+        .footer .gold {
+            color: #E09E36;
+            border-color: rgba(224, 158, 54, 0.2);
+        }
+
+        .footer .teal {
+            color: #008080;
+            border-color: rgba(0, 128, 128, 0.15);
+        }
+
+        .footer p {
+            font-weight: 300;
+        }
+
+        .footer p strong {
+            font-weight: 600;
+            color: #4a4a5a;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .landing {
+                padding: 2rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 3.6rem;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1.2rem;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero-image {
+                height: 220px;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .feature .feature-image {
+                height: 120px;
+            }
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            .testimonial {
+                padding: 1.5rem 1.2rem;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .landing {
+                padding: 1.5rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-image {
+                height: 160px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .feature .feature-image {
+                height: 100px;
+            }
+            .search-bar input {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing">
+
+        <!-- ===== NAVIGATION ===== -->
+        <nav class="nav">
+            <div class="logo">✦ The Grand <span>Cherokee</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Amenities</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Search..." />
+                </div>
+                <a href="#" class="btn-login">Log In</a>
+            </div>
+        </nav>
+
+        <!-- ===== HERO ===== -->
+        <div class="hero">
+            <div class="badge">✦ BEST LUXURY HOTEL</div>
+            <h1>
+                Explore <span class="gold">The Sky</span><br />
+                The Limit
+            </h1>
+            <p class="sub">An unforgettable experience with a breathtaking view.</p>
+            <p class="location"><span class="pin">📍</span> Iwo, Nigeria</p>
+
+            <div class="btn-group">
+                <a href="#" class="btn-primary">Explore Rooms</a>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+
+            <!-- ===== HERO IMAGE (Ocean View) ===== -->
+            <div class="hero-image">
+                <img src="https://i.ibb.co/xtrfkh6J/images-12.jpg" alt="Ocean View at The Grand Cherokee" />
+            </div>
+
+            <!-- ===== TESTIMONIAL ===== -->
+            <div class="testimonial">
+                <p class="quote">"An unforgettable experience with a breathtaking view."</p>
+                <p class="author">— Guest Review</p>
+            </div>
+        </div>
+
+        <!-- ===== FEATURES WITH YOUR IMAGES ===== -->
+        <div class="features">
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="https://i.ibb.co/Qjmf5DbP/images-13.jpg" alt="Luxury Suites" />
+                </div>
+                <h3>Luxury Suites</h3>
+                <p>Bar &amp; Lounge</p>
+            </div>
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="https://i.ibb.co/NdvZbtD0/9ef173cd-4555-41ff-ac04-1443f55c7d76-2x.jpg" alt="Fine Dining" />
+                </div>
+                <h3>Fine Dining</h3>
+                <p>Infinity Pool · 24/7 Power</p>
+            </div>
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="https://i.ibb.co/v4nBGPYz/images-14.jpg" alt="Fitness Center" />
+                </div>
+                <h3>Fitness Center</h3>
+                <p>Wellness &amp; Indoor Games</p>
+            </div>
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="https://i.ibb.co/xtrfkh6J/images-12.jpg" alt="Ocean View" />
+                </div>
+                <h3>Ocean View</h3>
+                <p>Full Furniture &amp; Serenity</p>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="codes">
+                <span class="code-badge gold">E09E</span>
+                <span class="code-badge">3603</span>
+                <span class="code-badge">3903</span>
+                <span class="code-badge">MOON</span>
+                <span class="code-badge">SUN</span>
+                <span class="code-badge">STAR</span>
+                <span class="code-badge">N018</span>
+                <span class="code-badge teal">833</span>
+                <span class="code-badge">8MAP</span>
+                <span class="code-badge">CAM8AM</span>
+                <span class="code-badge">T1F1</span>
+                <span class="code-badge">11</span>
+                <span class="code-badge">LIFE</span>
+                <span class="code-badge">585</span>
+                <span class="code-badge">RED</span>
+                <span class="code-badge">ORANGE</span>
+                <span class="code-badge">YELLOW</span>
+                <span class="code-badge">GREEN</span>
+                <span class="code-badge">BLUE</span>
+                <span class="code-badge">INDIGO</span>
+                <span class="code-badge">PINK</span>
+            </div>
+            <p>© 2026 <strong>The Grand Cherokee</strong> — ALL-CODES ENTERPRISE</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
