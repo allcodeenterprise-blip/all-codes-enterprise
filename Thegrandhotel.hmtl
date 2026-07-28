@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -132,7 +132,7 @@
         }
 
         /* ===== HERO ===== */
-     .hero {
+        .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -487,7 +487,7 @@
                 <a href="#" class="btn-secondary">Know More</a>
             </div>
 
-            <!-- ===== HERO IMAGE (Ocean View) ===== -->
+            <!-- ===== HERO IMAGE ===== -->
             <div class="hero-image">
                 <img src="https://i.ibb.co/xtrfkh6J/images-12.jpg" alt="Ocean View at The Grand Cherokee" />
             </div>
@@ -499,7 +499,7 @@
             </div>
         </div>
 
-        <!-- ===== FEATURES WITH YOUR IMAGES ===== -->
+        <!-- ===== FEATURES ===== -->
         <div class="features">
             <div class="feature">
                 <div class="feature-image">
