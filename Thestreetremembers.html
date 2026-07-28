@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,17 +35,18 @@
             padding: 1rem 0 2rem;
             flex-wrap: wrap;
             gap: 1rem;
-            border-bottom: 1px solid rgba(224, 158, 54, 0.1);
+            border-bottom: 2px solid rgba(224, 158, 54, 0.15);
         }
 
-        .logo {
+        .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #E09E36;
+            letter-spacing: 0.02em;
         }
 
-        .logo span {
+        .logo-text span {
             color: #f0f0f8;
         }
 
@@ -61,22 +63,25 @@
             font-weight: 500;
             font-size: 0.9rem;
             transition: 0.3s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.3rem;
         }
 
         .nav-links a:hover {
             color: #E09E36;
+            border-bottom-color: #8B0000;
         }
 
         /* ===== HERO ===== */
         .hero {
             text-align: center;
-            padding: 4rem 0 3rem;
+            padding: 3rem 0 2rem;
         }
 
         .hero .badge {
             display: inline-block;
-            background: rgba(224, 158, 54, 0.08);
-            border: 1px solid rgba(224, 158, 54, 0.1);
+            background: rgba(139, 0, 0, 0.2);
+            border: 1px solid #8B0000;
             padding: 0.3rem 1.5rem;
             border-radius: 40px;
             font-size: 0.7rem;
@@ -84,26 +89,26 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
+        .hero-logo {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto 1rem;
         }
 
-        .hero h1 .gold {
-            color: #E09E36;
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .hero .tagline {
             font-size: 1.4rem;
             color: #C0C0C0;
             font-style: italic;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .hero .sub {
@@ -123,7 +128,7 @@
 
         .hero .info-item {
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            border: 1px solid rgba(139, 0, 0, 0.2);
             border-radius: 0.8rem;
             padding: 0.5rem 1.5rem;
             font-size: 0.85rem;
@@ -153,6 +158,8 @@
             transition: 0.3s;
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .btn-primary:hover {
@@ -170,19 +177,75 @@
             font-size: 1rem;
             text-decoration: none;
             transition: 0.3s;
-            border: 1px solid #E09E36;
+            border: 1px solid #8B0000;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .btn-secondary:hover {
-            background: rgba(224, 158, 54, 0.06);
+            background: rgba(139, 0, 0, 0.1);
             transform: translateY(-3px);
+        }
+
+        /* ===== CARD SHOWCASE ===== */
+        .card-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(139, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+        }
+
+        .card-item {
+            text-align: center;
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .card-item:hover {
+            border-color: #E09E36;
+            transform: translateY(-4px);
+        }
+
+        .card-item .card-label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #E09E36;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .card-item .card-label span {
+            color: #C0C0C0;
+            font-weight: 300;
+        }
+
+        .card-item img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 1rem;
+            border: 2px solid rgba(139, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-item .card-desc {
+            font-size: 0.85rem;
+            color: #9090a8;
+            margin-top: 0.8rem;
+            font-style: italic;
         }
 
         /* ===== SECTION STYLES ===== */
         section {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(192, 192, 192, 0.03);
+            padding: 3rem 0;
+            border-top: 1px solid rgba(139, 0, 0, 0.08);
         }
 
         .section-title {
@@ -213,8 +276,8 @@
         }
 
         .mode-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 1.2rem;
             padding: 1.5rem;
             transition: 0.3s;
@@ -235,7 +298,8 @@
 
         .mode-card .mode-stakes {
             font-size: 0.75rem;
-            color: #9090a8;
+            color: #8B0000;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
@@ -252,8 +316,8 @@
         }
 
         .rules-block {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 1.2rem;
             padding: 1.5rem 2rem;
         }
@@ -264,7 +328,7 @@
             font-weight: 700;
             color: #E09E36;
             margin-bottom: 0.8rem;
-            border-bottom: 1px solid rgba(224, 158, 54, 0.06);
+            border-bottom: 1px solid rgba(139, 0, 0, 0.2);
             padding-bottom: 0.5rem;
         }
 
@@ -291,8 +355,8 @@
         }
 
         .rep-col {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 1.2rem;
             padding: 1.5rem 2rem;
         }
@@ -322,7 +386,8 @@
 
         .rep-levels {
             margin-top: 1.5rem;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 1.2rem;
             padding: 1.5rem 2rem;
         }
@@ -357,13 +422,13 @@
         /* ===== COMPONENTS ===== */
         .components-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1rem;
         }
 
         .component-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 0.8rem;
             padding: 1rem;
             text-align: center;
@@ -388,8 +453,8 @@
         }
 
         .pricing-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(192, 192, 192, 0.04);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.15);
             border-radius: 1.5rem;
             padding: 2rem;
             text-align: center;
@@ -411,6 +476,7 @@
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 0.3rem;
+            color: #f0f0f8;
         }
 
         .pricing-card .price {
@@ -434,14 +500,53 @@
 
         .pricing-card ul li::before {
             content: "✦ ";
+            color: #8B0000;
+        }
+
+        .pricing-card .btn-primary {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ===== ORDER ===== */
+        #order {
+            text-align: center;
+        }
+
+        #order .btn-primary {
+            margin-bottom: 1rem;
+        }
+
+        #order p {
+            color: #9090a8;
+            font-size: 0.9rem;
+        }
+
+        #order .email-link {
             color: #E09E36;
+            text-decoration: none;
+        }
+
+        #order .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .creator-name {
+            color: #606078;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .creator-name strong {
+            color: #C0C0C0;
         }
 
         /* ===== FOOTER ===== */
         .footer {
             text-align: center;
             padding: 2.5rem 0 1.5rem;
-            border-top: 1px solid rgba(192, 192, 192, 0.04);
+            border-top: 2px solid rgba(139, 0, 0, 0.15);
+            margin-top: 2rem;
             font-size: 0.8rem;
             color: #606078;
         }
@@ -468,6 +573,11 @@
             border-color: rgba(224, 158, 54, 0.15);
         }
 
+        .footer .red {
+            color: #8B0000;
+            border-color: rgba(139, 0, 0, 0.15);
+        }
+
         .footer a {
             color: #E09E36;
             text-decoration: none;
@@ -484,8 +594,8 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
+            .hero-logo {
+                max-width: 300px;
             }
             .hero .tagline {
                 font-size: 1.1rem;
@@ -506,9 +616,15 @@
             .hero .info-grid {
                 gap: 1rem;
             }
+            .card-showcase {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
+            .hero-logo {
+                max-width: 220px;
+            }
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -535,7 +651,7 @@
 
         <!-- ===== HEADER ===== -->
         <header class="header">
-            <div class="logo">✦ The Street <span>Remembers</span></div>
+            <div class="logo-text">✦ The Street <span>Remembers</span></div>
             <ul class="nav-links">
                 <li><a href="#game">Game</a></li>
                 <li><a href="#modes">Modes</a></li>
@@ -549,10 +665,12 @@
         <!-- ===== HERO ===== -->
         <section class="hero" id="game">
             <div class="badge">✦ Hardcore Edition</div>
-            <h1>
-                The Street<br />
-                <span class="gold">Remembers</span>
-            </h1>
+
+            <!-- ===== LOGO ===== -->
+            <div class="hero-logo">
+                <img src="https://i.ibb.co/TM2JwTGV/IMG-20260621-WA0001.jpg" alt="The Street Remembers Logo" />
+            </div>
+
             <p class="tagline">"The street never forgets."</p>
             <p class="sub">A social deduction game about accountability, trust, and real-world consequences.</p>
 
@@ -568,6 +686,20 @@
                 <a href="#rules" class="btn-secondary">📖 Learn More</a>
             </div>
         </section>
+
+        <!-- ===== CARD SHOWCASE ===== -->
+        <div class="card-showcase">
+            <div class="card-item">
+                <div class="card-label">🃏 Problem <span>Card</span></div>
+                <img src="https://i.ibb.co/TM2JwTGV/IMG-20260621-WA0001.jpg" alt="Problem Card" />
+                <p class="card-desc">"I need a job. Any job. I have been searching for 8 months."</p>
+            </div>
+            <div class="card-item">
+                <div class="card-label">⚡ Challenge <span>Card</span></div>
+                <img src="https://i.ibb.co/9kSK1yfb/IMG-20260621-WA0000.jpg" alt="Challenge Card" />
+                <p class="card-desc">"The street remembers when you promised to help me. You never did."</p>
+            </div>
+        </div>
 
         <!-- ===== MODES ===== -->
         <section id="modes">
@@ -690,10 +822,10 @@
                         <li>Printable components</li>
                         <li>Instant download</li>
                     </ul>
-                    <a href="#order" class="btn-primary" style="width:100%;text-align:center;">Get Digital</a>
+                    <a href="#order" class="btn-primary">Get Digital</a>
                 </div>
 
-                <div class="pricing-card" style="border-color:#E09E36; background:rgba(224,158,54,0.03);">
+                <div class="pricing-card" style="border-color:#8B0000; background:rgba(139,0,0,0.05);">
                     <div class="icon">📦</div>
                     <h3>Physical Box</h3>
                     <div class="price">$44</div>
@@ -703,28 +835,28 @@
                         <li>Full manual + quick reference</li>
                         <li>Shipping included</li>
                     </ul>
-                    <a href="#order" class="btn-primary" style="width:100%;text-align:center;">Order Now</a>
+                    <a href="#order" class="btn-primary">Order Now</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== ORDER / CONTACT ===== -->
+        <!-- ===== ORDER ===== -->
         <section id="order">
             <h2 class="section-title">Get the <span class="gold">Game</span></h2>
             <p class="section-sub">Ready to play? Reach out and I'll ship it to you.</p>
 
-            <div style="text-align:center; max-width:500px; margin:0 auto;">
+            <div style="max-width:500px; margin:0 auto;">
                 <a href="https://wa.me/2348106207182" target="_blank" class="btn-primary" style="display:inline-block; margin-bottom:1rem;">
                     💬 Order via WhatsApp
                 </a>
                 <p style="color:#9090a8; font-size:0.9rem;">
-                    Or email: <a href="mailto:allcodeenterprise@gmail.com" style="color:#E09E36;">allcodeenterprise@gmail.com</a>
+                    Or email: <a href="mailto:allcodeenterprise@gmail.com" class="email-link">allcodeenterprise@gmail.com</a>
                 </p>
                 <p style="color:#606078; font-size:0.8rem; margin-top:0.5rem;">
                     📞 +234 810 620 7182
                 </p>
-                <p style="color:#404058; font-size:0.7rem; margin-top:1rem;">
-                    Creator: <strong style="color:#C0C0C0;">Jubril Aminu</strong>
+                <p class="creator-name">
+                    Creator: <strong>Jubril Aminu</strong>
                 </p>
             </div>
         </section>
@@ -733,7 +865,7 @@
         <footer class="footer">
             <div class="codes">
                 <span class="code-badge gold">E09E</span>
-                <span class="code-badge">3603</span>
+                <span class="code-badge red">3603</span>
                 <span class="code-badge">3903</span>
                 <span class="code-badge">MOON</span>
                 <span class="code-badge">SUN</span>
