@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Grand Cherokee — Luxury Hotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0b12;
+            color: #f0f0f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .landing {
+            max-width: 1200px;
+            width: 100%;
+            background: linear-gradient(145deg, rgba(18, 18, 32, 0.95), rgba(8, 8, 16, 0.98));
+            border: 1px solid rgba(224, 158, 54, 0.1);
+            border-radius: 2.5rem;
+            padding: 3rem 3rem 2rem;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .landing::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(224, 158, 54, 0.04), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .landing::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(74, 0, 128, 0.03), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* --- NAVIGATION --- */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #E09E36;
+            letter-spacing: 0.02em;
+        }
+
+        .nav .logo span {
+            color: #f0f0f8;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #E09E36;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            border: 1px solid rgba(192, 192, 192, 0.04);
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: #C0C0C0;
+            padding: 0.3rem 0.5rem;
+            outline: none;
+            font-size: 0.8rem;
+            width: 100px;
+        }
+
+        .search-bar input::placeholder {
+            color: #606078;
+        }
+
+        .search-bar .icon {
+            color: #606078;
+            font-size: 0.8rem;
+        }
+
+        .btn-login {
+            color: #E09E36;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .btn-login:hover {
+            text-decoration: underline;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 1rem 0 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 320px;
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(224, 158, 54, 0.08);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(224, 158, 54, 0.08);
+            border: 1px solid rgba(224, 158, 54, 0.08);
+            padding: 0.3rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.65rem;
+            color: #E09E36;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 4.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero h1 .gold {
+            background: linear-gradient(135deg, #E09E36, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #9090a8;
+            max-width: 550px;
+            margin: 0.5rem auto 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            color: #606078;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .location .pin {
+            color: #E09E36;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #E09E36;
+            color: #0b0b12;
+            padding: 0.9rem 3rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(224, 158, 54, 0.3);
+        }
+
+        .testimonial {
+            margin: 2rem auto 0;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(192, 192, 192, 0.04);
+            border-radius: 1.2rem;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .testimonial .quote {
+            font-style: italic;
+            font-size: 1rem;
+            color: #C0C0C0;
+        }
+
+        .testimonial .author {
+            font-weight: 700;
+            color: #E09E36;
+            margin-top: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        /* --- FEATURES --- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(192, 192, 192, 0.04);
+            border-radius: 1.2rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            border-color: #E09E36;
+            transform: translateY(-5px);
+        }
+
+        .feature .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #f0f0f8;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature p {
+            font-size: 0.75rem;
+            color: #9090a8;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(192, 192, 192, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.7rem;
+            color: #404058;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer .codes {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .footer .code-badge {
+            font-family: monospace;
+            font-size: 0.55rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            border: 1px solid rgba(192, 192, 192, 0.04);
+            color: #606078;
+        }
+
+        .footer .gold {
+            color: #E09E36;
+            border-color: #E09E36;
+        }
+
+        .footer .teal {
+            color: #008080;
+            border-color: #008080;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .landing {
+                padding: 2rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .nav-actions {
+                flex-wrap: wrap;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-image {
+                height: 200px;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .landing {
+                padding: 1.5rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-image {
+                height: 160px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .btn-cta {
+                width: 100%;
+                text-align: center;
+            }
+            .search-bar input {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing">
+
+        <!-- ===== NAVIGATION ===== -->
+        <nav class="nav">
+            <div class="logo">✦ The Grand <span>Cherokee</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Amenities</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Search..." />
+                </div>
+                <a href="#" class="btn-login">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- ===== HERO ===== -->
+        <div class="hero">
+
+            <!-- ===== YOUR IMAGE FROM IMGBB ===== -->
+            <div class="hero-image">
+                <img src="https://i.ibb.co/xtrfkh6J/images-12.jpg" alt="Ocean View at The Grand Cherokee" />
+            </div>
+
+            <div class="badge">✦ LUXURY HOTEL</div>
+            <h1>
+                The Sky Is<br />
+                <span class="gold">The Limit</span>
+            </h1>
+            <p class="sub">An unforgettable experience with a breathtaking view.</p>
+            <p class="location"><span class="pin">📍</span> Iwo, Nigeria</p>
+
+            <a href="#" class="btn-cta">Explore Rooms</a>
+
+            <!-- ===== TESTIMONIAL ===== -->
+            <div class="testimonial">
+                <p class="quote">"An unforgettable experience with a breathtaking view."</p>
+                <p class="author">— Guest Review</p>
+            </div>
+
+        </div>
+
+        <!-- ===== FEATURES ===== -->
+        <div class="features">
+            <div class="feature">
+                <div class="icon">🛋️</div>
+                <h3>Luxury Suites</h3>
+                <p>Bar &amp; Lounge</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🍽️</div>
+                <h3>Fine Dining</h3>
+                <p>Infinity Pool · 24/7 Generator</p>
+            </div>
+            <div class="feature">
+                <div class="icon">💪</div>
+                <h3>Fitness Center</h3>
+                <p>Indoor Games &amp; Wellness</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🌊</div>
+                <h3>Ocean View</h3>
+                <p>Full Furniture &amp; Serenity</p>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="codes">
+                <span class="code-badge gold">E09E</span>
+                <span class="code-badge">3603</span>
+                <span class="code-badge">3903</span>
+                <span class="code-badge">MOON</span>
+                <span class="code-badge">SUN</span>
+                <span class="code-badge">STAR</span>
+                <span class="code-badge">N018</span>
+                <span class="code-badge teal">833</span>
+                <span class="code-badge">8MAP</span>
+                <span class="code-badge">CAM8AM</span>
+                <span class="code-badge">T1F1</span>
+                <span class="code-badge">11</span>
+                <span class="code-badge">LIFE</span>
+                <span class="code-badge">585</span>
+                <span class="code-badge">RED</span>
+                <span class="code-badge">ORANGE</span>
+                <span class="code-badge">YELLOW</span>
+                <span class="code-badge">GREEN</span>
+                <span class="code-badge">BLUE</span>
+                <span class="code-badge">INDIGO</span>
+                <span class="code-badge">PINK</span>
+            </div>
+            <p>© 2026 The Grand Cherokee — ALL-CODES ENTERPRISE</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
